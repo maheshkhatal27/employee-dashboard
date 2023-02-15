@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN for table-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar-container">
+            <div class="logo-details">
+                <h1 class="admin">Hi, Admin</h1>
+                <ul class="items">
+                    <li><a href="#" class="linkname" id="empdashnavigate">Employees</a></li>
+                    <li><a href="job-list.html" target="joblist" class="linkname" id="jobnavigate">Jobs</a></li>
+                </ul>
+            </div>
+            <div class="search-logout-container">
+                <div class="search-bar">
+                    <input type="search" class="search-field" placeholder="Search..." />
+                    <div class="img-container">
+                        <img src="./images/search-icon-2.png" alt="search-logo" class="search-icon" />
+                    </div>
+                </div>
+                <button type="button" class="button-logout" id="logoutbtn">Log Out</button>
+            </div>
+        </nav>
+        <div class="dashboard-menu-container" id="empdata">
+            <div class="dashboard-items" id="dashboardmenu">
+                <div class="list-item empdata-item" id="dash-item1">Employee Data</div>
+                <div class="list-item" id="dash-item2" >
+                    <!-- Button trigger modal -->
+                    <button type="button" class="add-user-tab" data-toggle="modal" data-target="#exampleModal">
+                        Add Employee
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">Add Employee
+                                        Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-data-add-user" id="emform"
+                                        onsubmit="event.preventDefault(); signup();">
+                                        <input type="date" id="date" class="form-input-field" />
+                                        <input type="text" id="empname" placeholder="Employee Name"
+                                            class="form-input-field" />
+                                        <input type="text" id="empemail" placeholder="Employee Email Id"
+                                            class="form-input-field" />
+                                        <input type="text" id="empnumber" placeholder="Employee Phone Number"
+                                            class="form-input-field" />
+                                        <input type="text" id="empjob" placeholder="Graphic Designer"
+                                            class="form-input-field" />
+                                        <button type="submit" class="add-emp-btn" onclick="addEmployeeData()">Add New
+                                            Employee</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr class="horizontal-line" />
+                <div class="list-item" id="viewemp">View All Employee</div>
+            </div>
+            <div class="employee-table">
+                <table class="table table-striped" id="emptable" style="width:950px;">
+                    <thead style="background-color: black;color:#fff">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Emaild ID</th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="joblist-container" id="jobdata">
+            <iframe name="joblist" height="100%" width="100%" frameBorder="0"></iframe>
+        </div>
+    </div>
+    <script src="logout.js"></script>
+</body>
+
+</html>

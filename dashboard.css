@@ -1,0 +1,273 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.login-container{
+    background-color: #737573;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-details{
+    background-color: #fff;
+    background-size: cover;
+    padding:40px 20px 40px 20px;
+    border-radius: 5px;
+}
+
+.login-as-admin{
+    font-size: 26px;
+    font-family: sans-serif;
+    margin-bottom:10px;
+}
+.desc{
+    font-size: 16px;
+    font-family: sans-serif;
+    color:#5e5b5b;
+    margin-bottom:20px;
+    font-weight: 500;
+}
+.input-field{
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #8a8884;
+    outline: none;
+    font-size: 16px;
+    padding:4px;
+    margin-bottom: 20px;
+}
+.button{
+    background-color: #0d780d;
+    color:#fff;
+    font-size:16px;
+    border-radius: 3px;
+    height: 30px;
+    width: 400px;
+    border-width: 0px;
+    padding:3px;
+    cursor:pointer;
+}
+
+.errMsg{
+    color:#e31710;
+    font-size:16px;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+/* navbar related CSS */
+.dashboard-container{
+    background-color: #dedcd9;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.navbar-container{
+    height:60px;
+    width:100%;
+    background-color: #252526;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    
+
+}
+.admin{
+    color:#fff;
+    font-size:25px;
+    font-family: sans-serif;
+}
+.items{
+    display: flex;
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top:10px;
+
+}
+
+.linkname{
+    color:#b8b2a9;
+    font-size:20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    margin-right:20px;
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-right: 15px;
+   
+}
+.search-field{
+    border:0px;
+    height:32px;
+    width:200px;
+    outline:none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius:3px ;
+    padding:5px;
+}
+.search-icon{
+    height: 20px;
+    width:20px;
+    cursor: pointer;
+}
+
+.img-container{
+    background-color: #089c20;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius:3px;
+    height: 32px;
+    padding:5px;
+}
+.logo-details{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.button-logout{
+    background-color: #f58311;
+    color:#050004;
+    font-size:18px;
+    border-radius: 3px;
+    border-width: 0px;
+    height: 32px;
+    width:80px;
+    cursor: pointer;
+}
+.search-logout-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.dashboard-menu-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-left:20px;
+    margin-right:20px;
+    
+    
+}
+.dashboard-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size:20px;
+    font-family: sans-serif;
+    color:#1a25ed;
+    margin-top:80px;
+}
+/* border-bottom: 1px solid #dcdde8;*/
+.list-item{
+    width: 350px;
+    cursor: pointer;
+    padding-left:25px;
+    padding-top:10px;
+    
+}
+
+.horizontal-line{
+    border:1px solid #dcdde8;
+    
+    width: 100%;
+}
+
+.empdata-item{
+    background-color: #1a25ed;
+    color:#fff;
+    background-size:cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height:60px;
+}
+
+/*
+.current-tab{
+    background-color:#1a25ed ;
+    color:#ffff;
+}*/
+
+
+/* employee-list css */
+.employee-table{
+    margin-top: 80px;      
+}
+
+/* Modal for adding user */
+
+.add-user-tab{
+    background-color: transparent;
+    border-width: 0px;
+    color:#1a25ed;
+}
+
+.form-input-field{
+    height: 35px;
+    width:750px;
+    border-radius: 3px;
+    border:1px solid #dbd1c8;
+    margin-bottom:15px;
+    outline:none;
+    padding:10px;
+}
+.form-data-add-user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-size{
+    width: 750px;
+  margin: auto
+}
+
+.add-emp-btn{
+    background-color: #089c20;
+    color:#ffffff;
+    width:750px;
+    height: 35px;
+    border-width: 0px;
+    border-end-end-radius: 5px;
+    font-size:18px;
+    padding: 5px;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.joblist-container{
+    padding-top:100px;
+    padding-left:60px;
+    height:100vh;
+    background-size: cover;
+    background-color: #dcdde8;
+}
